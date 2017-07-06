@@ -1,0 +1,25 @@
+
+{
+	"apps:" [
+		{
+			"name": "Website",
+			"script": "app.js",
+			"env" : {
+				"COMMON_VARIABLE" :"true"
+			},
+			"env_production":{
+				"NODE_ENV":"production"
+			}
+		}
+	],
+	"deploy":{
+		"production":{
+			"user":"root",
+			"host":[""],
+			"ref":"origin/master",
+			"repo":""
+			"path":"/home/wwwroot/production",
+			"ssh_options":""
+		}
+	}
+}
