@@ -1,0 +1,26 @@
+{
+    "apps": [{
+        "name": "Website",
+        "script": "app.js",
+        "env": {
+            "COMMON_VARIABLE": "true"
+        },
+        "env_production": {
+            "NODE_ENV": "production"
+        }
+    }],
+    "deploy": {
+        "production": {
+            "user": "root",
+            "host": ["120.27.245.209"],
+            "port": 22,
+            "ref": "origin/master",
+            "repo": "https://github.com/7fe/nodes.git",
+            "path": "/home/wwwroot/production",
+            "ssh_options": "StrictHostKeyChecking=no",
+            "env": {
+                "NODE_ENV": "production"
+            }
+        }
+    }
+}
